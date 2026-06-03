@@ -77,7 +77,8 @@ The objective of this analysis was to observe how a TCP connection is establishe
 While capturing traffic in Wireshark, I visited Github using a web browser and filtered for TCP traffic. I observed the TCP three-way handshake consisting of SYN, SYN-ACK, and ACK packets between the client and the destination server.
 
 One observed connection used the following values:
-- Source IP:
+- Source IP: 192.168.x.x
+- Destination IP: 140.82.x.x
 
 ## Findings
 
@@ -92,5 +93,28 @@ By observing the handshake process, I was able to see how TCP establishes a reli
 This analysis helped me understand how TCP provides reliable communication between network devices. I learned how the TCP three-way handshake establishes a connection and how source and destination ports are used to identify services and individual network sessions. 
 
 # TLS Analysis
+
+## Objective 
+
+The objective of this analysis was to observe how TLS is used to establish a secure and encrypted conneciton between a client and a server. 
+
+## Observation
+
+After identifying the TCP three-way handshake, I continued analyzing the connection and observed a TLS 1.3 handshake between the client and GitHub. The captured traffic included Client Hello, Server Hello, Change Cipher Spec, and Application Data packets.
+
+The Client Hello packet contained an SNI (Server Name Indication) value of github.com, indicating the hostname the client intended to access. 
+
+## Findings 
+
+Following the successful TCP connection, the client initiated a TLS handshake by sending a Client Hello packet. This packet began the process of negotiating encryption settings and establishing a secure communication channel.
+
+The server responded with a Server Hello packet, confirming the TLS parameters that would be used for the session. Aftr the TLS negotiation was complated, encrypted Application Data packets were exchanged between the client and server. 
+
+The use of TLS 1.3 demonstrated how modern website protect data in transit by encrypting communication between clients and servers. 
+
+## Key Learning 
+
+This analysis helped me understand the role of TLS in securing network communications. I learned how TLS builds upon a TCP connection to provide confidentiality, integrity, and authentication for HTTPS traffic. I also learned how SNI allows a client to specify the hostname it is attempting to access when mutliple websites share the same server infrastructure.
+
 
 # Conlusion 
