@@ -1,6 +1,6 @@
-## Network-Analysis-using-Wireshark
+# Network-Analysis-using-Wireshark
 
-# Objective
+## Objective
 
 This project demonstrates the use of Wireshark to capture and analyze network traffic. The objective of this project was to develop a stronger understanding of fundamental networking concepts by observing real network communications and protocols in action.
 
@@ -24,23 +24,25 @@ wireshark-network-analysis/
 
 # DNS analysis
 
-## the objective 
+### Objective
 
 The objective of this analysis was to observe how domain names are resolved into IP addresses before a connection to a website can be established.
 
-## Observation
+### Observation
 
-Using Wireshark, captureed DNS traffic while visiting websites in a web browser. After applying a DNS filter, I observed both DNS query and DNS response packets. One of the capturequeries showed a request for www.google.com
+To generate DNS traffic, I first cleared the local DNS cache using ipconfig /flushdns and then visited websites using a web browser while capturing packets in Wireshark. After applying a DNS filter, I observed both DNS query and DNS response packets. One of the captured queries showed a request for www.google.com.
 
-## Findings
+### Findings
 
-the DNS query packet contained the domain name being requested by the client. A corresponding DNS response packet returned the IP address assoicated with the requested domain. This demonstrated how a device relies on DNS to locate the correct server before initiating a network connection.
+The DNS query packet contained the domain name being requested by the client. A corresponding DNS response packet returned the IP address associated with the requested domain. This demonstrated how a device relies on DNS to locate the correct server before initiating a network connection.
+
+By clearing the DNS cache before capturing traffic, I was able to observe the DNS resolution process directly rather than relying on previously cached entries.
 
 Through packet analysis, I observed that DNS communication occurs before TCP and TLS communication, making DNS one of the first steps in accessing a website.
 
-## Key Learning
+### Key Learning
 
-This analysis helped me understand that DNS acts as a translation service between human-readable domain names and IP addresses used by computers. Without DNS, user would need to manually enter IP addresses to access website and network services. 
+This analysis helped me understand that DNS acts as a translation service between human-readable domain names and IP addresses used by computers. Without DNS, users would need to manually enter IP addresses to access websites and network services.
 
 # ICMP
 
