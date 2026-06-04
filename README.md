@@ -116,5 +116,42 @@ The use of TLS 1.3 demonstrated how modern website protect data in transit by en
 
 This analysis helped me understand the role of TLS in securing network communications. I learned how TLS builds upon a TCP connection to provide confidentiality, integrity, and authentication for HTTPS traffic. I also learned how SNI allows a client to specify the hostname it is attempting to access when mutliple websites share the same server infrastructure.
 
+# Traceroute Analysis
+
+## Objective 
+
+The objective of this analysis was to observe the network path taken by packets when traveling from the client to a remote destination.
+
+## Observation
+
+Using the Windows tracert command, I traced the route to Github and observed multiple network hops between the client and the destination. The results included both private and public IP addresses, representing different network devices and routing infrastructure along the path.
+
+Some hops returned response times, while others displayed asterisks (* * *), indicating that a response was not received from that hop.
+
+## Findings
+
+The traceroute results demonstrated that network traffic passes through multiple routers before reeaching its destination. The initial hops contained private IP addresses associated with local or provider-managed network infrastructure, while later hops contained public IP addresses used on the internet. 
+
+The presence of asterisks did not necessarily indicate a connectivity problem. Instead, it suggested that certain routers were configued not to respond to traceroute requests or were rate-limiting responses.
+
+## Key Learning 
+
+This analysis helped me understand how packets travel across multiple network divices before reaching a destination. I leanred how traceroute can be used as a troubleshooting tool to identify network paths, measure latency between hops, and help locate potential connectivity issues.
+
+# Lessons Learned
+
+Through this project, I devloped a stronger understanding of fundamental networking concepts by capturing and analyzing real network traffic. 
+
+Key concpets leanred include:
+- How DNS translates domain names into Ip addresses before a connection can be established.
+- How ICMP is used for network diagnostics through tools such as ping.
+- How TCP establishes reliable communication using the three-way handshake (SYN, SYN-ACK, ACK).
+- How source and destination ports are used to identify services and individual network connections.
+- How TLS 1.3 establishes encrypted communications for HTTPS traffic.
+- How SNI (Server Name Indication) identifies the hostname a client is attempting to access.
+- How traceroute reveals the network path and routing devices between a client and destination.
+- How Wireshark can be used to analyze and troubleshoot network communications at the packet level.
+
+This project helpd bridge the gap between theoretical networking concepts and real-world network traffic analysis.
 
 # Conlusion 
