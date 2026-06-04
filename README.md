@@ -154,4 +154,21 @@ Key concpets leanred include:
 
 This project helpd bridge the gap between theoretical networking concepts and real-world network traffic analysis.
 
+# Challenges Encoutered 
+
+While completing this project, I encoutered several challenges that required additional investigation and analysis.
+
+Some of the main challenges included:
+- Identifying relevant packets within large amounts of captured network traffic.
+- Distinguished between source and destination Ip addresses during packet analysis.
+- Understanding the purpse of ephemeral source ports used by client devices.
+- Following the sequence of packets involved in the TCP three-way handshake.
+- Interpreting TLS handshake packets and understanding the role of Client Hello, Server Hello, and encrypted Application Data.
+
+Working through these challenges improved my ability to analyze network traffic and strengthened my understanding of how modern network communications operate.
+
 # Conlusion 
+
+This project provided hands-on experience with capturing and analyzing network traffic usign Wireshark. By observing DNS resolution, ICMP communication, TCP connection establishment, TLS encryption, and traceroute results, I gained a practical understanding of how devices communicate across networks. 
+
+The project strengthened my network fundamentals and provided valuable experience that supports my preparation for entry-level IT Support and Help Desk roles while building a foundation for future cybersecurity studies.
