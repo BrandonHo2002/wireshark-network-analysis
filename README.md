@@ -8,13 +8,15 @@ During the analysis, I examined DNS queries and responses, ICMP traffic generate
 
 This project was completed as part of my preparation for entry-level IT Support and Help Desk roles, while also building foundational knowledge for a future career in cybersecurity.
 
-# Wireshark structure 
+# Repository structure 
 
+```text
 wireshark-network-analysis/
 │
 ├── README.md
 ├── screenshots/
 └── captures/
+```
 
 # Tools used
 
@@ -31,6 +33,10 @@ The objective of this analysis was to observe how domain names are resolved into
 ### Observation
 
 To generate DNS traffic, I first cleared the local DNS cache using ipconfig /flushdns and then visited websites using a web browser while capturing packets in Wireshark. After applying a DNS filter, I observed both DNS query and DNS response packets. One of the captured queries showed a request for www.google.com.
+
+### Screenshot
+
+![DNS Query and Response](screenshots/dns-query-response.png)
 
 ### Findings
 
@@ -54,6 +60,10 @@ The objective of this analysis was to understand how ICMP is used for network di
 
 While capturing network traffic in Wireshark, I generated ICMP traffic by running the ping command against a public host. After applying an ICMP filter, I observed Echo Request and Echo Reply packets exchanged between the client and the destination host. 
 
+### Screenshot
+
+![ICMP Echo Request and Reply](screenshots/icmp-ping.png)
+
 ## findings 
 
 The Echo Request packets were sent from the client to verify that the destination host was reachable. The destination host responded with Echo Reply packets, confirming successful network connectivity. 
@@ -72,7 +82,7 @@ This analysis helped me understand that ICMP is a protocol used for netowrk diag
 
 The objective of this analysis was to observe how a TCP connection is established between a client and a server before data is exchanged.
 
-## Obervation 
+## Observation 
 
 While capturing traffic in Wireshark, I visited Github using a web browser and filtered for TCP traffic. I observed the TCP three-way handshake consisting of SYN, SYN-ACK, and ACK packets between the client and the destination server.
 
@@ -80,11 +90,15 @@ One observed connection used the following values:
 - Source IP: 192.168.x.x
 - Destination IP: 140.82.x.x
 
+### Screenshot
+
+![TCP Three-Way Handshake](screenshots/tcp-three-way-handshake.png)
+
 ## Findings
 
 The TCP handshake began when the client sent a SYN packet to initiate a connection with the server. The server responded with a SYN-ACK packet, indicating that it received the request and was willing to establish a connection. the Client then sent an ACK packet, completing the three-way handshake.
 
-The destination port was 443, indicating that the connection was being established for HTTPS traffic. The source port was an ephemeral port automatically assigned by the operating system to uniquely identify the conneciton.
+The destination port was 443, indicating that the connection was being established for HTTPS traffic. The source port was an ephemeral port automatically assigned by the operating system to uniquely identify the connection.
 
 By observing the handshake process, I was able to see how TCP establishes a reliable connection before any application data is transmitted. 
 
@@ -96,13 +110,17 @@ This analysis helped me understand how TCP provides reliable communication betwe
 
 ## Objective 
 
-The objective of this analysis was to observe how TLS is used to establish a secure and encrypted conneciton between a client and a server. 
+The objective of this analysis was to observe how TLS is used to establish a secure and encrypted connection between a client and a server. 
 
 ## Observation
 
 After identifying the TCP three-way handshake, I continued analyzing the connection and observed a TLS 1.3 handshake between the client and GitHub. The captured traffic included Client Hello, Server Hello, Change Cipher Spec, and Application Data packets.
 
 The Client Hello packet contained an SNI (Server Name Indication) value of github.com, indicating the hostname the client intended to access. 
+
+### Screenshot
+
+![TLS Client Hello](screenshots/tls-client-hello.png)
 
 ## Findings 
 
@@ -130,19 +148,19 @@ Some hops returned response times, while others displayed asterisks (* * *), ind
 
 ## Findings
 
-The traceroute results demonstrated that network traffic passes through multiple routers before reeaching its destination. The initial hops contained private IP addresses associated with local or provider-managed network infrastructure, while later hops contained public IP addresses used on the internet. 
+The traceroute results demonstrated that network traffic passes through multiple routers before reaching its destination. The initial hops contained private IP addresses associated with local or provider-managed network infrastructure, while later hops contained public IP addresses used on the internet. 
 
 The presence of asterisks did not necessarily indicate a connectivity problem. Instead, it suggested that certain routers were configued not to respond to traceroute requests or were rate-limiting responses.
 
 ## Key Learning 
 
-This analysis helped me understand how packets travel across multiple network divices before reaching a destination. I leanred how traceroute can be used as a troubleshooting tool to identify network paths, measure latency between hops, and help locate potential connectivity issues.
+This analysis helped me understand how packets travel across multiple network divices before reaching a destination. I learned how traceroute can be used as a troubleshooting tool to identify network paths, measure latency between hops, and help locate potential connectivity issues.
 
 # Lessons Learned
 
-Through this project, I devloped a stronger understanding of fundamental networking concepts by capturing and analyzing real network traffic. 
+Through this project, I developed a stronger understanding of fundamental networking concepts by capturing and analyzing real network traffic. 
 
-Key concpets leanred include:
+Key concpets learned include:
 - How DNS translates domain names into Ip addresses before a connection can be established.
 - How ICMP is used for network diagnostics through tools such as ping.
 - How TCP establishes reliable communication using the three-way handshake (SYN, SYN-ACK, ACK).
@@ -152,11 +170,11 @@ Key concpets leanred include:
 - How traceroute reveals the network path and routing devices between a client and destination.
 - How Wireshark can be used to analyze and troubleshoot network communications at the packet level.
 
-This project helpd bridge the gap between theoretical networking concepts and real-world network traffic analysis.
+This project helped bridge the gap between theoretical networking concepts and real-world network traffic analysis.
 
-# Challenges Encoutered 
+# Challenges Encountered 
 
-While completing this project, I encoutered several challenges that required additional investigation and analysis.
+While completing this project, I encountered several challenges that required additional investigation and analysis.
 
 Some of the main challenges included:
 - Identifying relevant packets within large amounts of captured network traffic.
@@ -167,7 +185,7 @@ Some of the main challenges included:
 
 Working through these challenges improved my ability to analyze network traffic and strengthened my understanding of how modern network communications operate.
 
-# Conlusion 
+# Conclusion 
 
 This project provided hands-on experience with capturing and analyzing network traffic usign Wireshark. By observing DNS resolution, ICMP communication, TCP connection establishment, TLS encryption, and traceroute results, I gained a practical understanding of how devices communicate across networks. 
 
