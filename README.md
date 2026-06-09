@@ -114,7 +114,7 @@ The objective of this analysis was to observe how TLS is used to establish a sec
 
 ## Observation
 
-After identifying the TCP three-way handshake, I continued analyzing the connection and observed a TLS 1.3 handshake between the client and GitHub. The captured traffic included Client Hello, Server Hello, Change Cipher Spec, and Application Data packets.
+After identifying the TCP three-way handshake, I continued analyzing the connection and observed a TLS 1.3 handshake between the client and GitHub. The captured traffic included Client Hello and Server Hello messages, followed by encrypted application data exchanged between the client and server.
 
 The Client Hello packet contained an SNI (Server Name Indication) value of github.com, indicating the hostname the client intended to access. 
 
