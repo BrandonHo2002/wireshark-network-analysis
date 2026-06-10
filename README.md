@@ -36,7 +36,7 @@ To generate DNS traffic, I first cleared the local DNS cache using ipconfig /flu
 
 ### Screenshot
 
-![DNS Query and Response](screenshots/dns-query-response.png)
+![DNS Query and Response](images/dns-query-response.png)
 
 ### Findings
 
@@ -62,7 +62,7 @@ While capturing network traffic in Wireshark, I generated ICMP traffic by runnin
 
 ### Screenshot
 
-![ICMP Echo Request and Reply](screenshots/icmp-ping.png)
+![ICMP Echo Request and Reply](images/icmp-echo-request-reply.png)
 
 ## findings 
 
@@ -92,7 +92,7 @@ One observed connection used the following values:
 
 ### Screenshot
 
-![TCP Three-Way Handshake](screenshots/tcp-three-way-handshake.png)
+![TCP Three-Way Handshake](images/tcp-three-way-handshake.png)
 
 ## Findings
 
@@ -120,7 +120,7 @@ The Client Hello packet contained an SNI (Server Name Indication) value of githu
 
 ### Screenshot
 
-![TLS Client Hello](screenshots/tls-client-hello.png)
+![TLS Client Hello](images/tls-client-hello.png)
 
 ## Findings 
 
