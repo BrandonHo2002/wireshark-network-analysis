@@ -1,5 +1,7 @@
 # Network-Analysis-using-Wireshark
 
+**Skills Demonstrated:** Wireshark, DNS, ICMP, TCP/IP, TLS, Traceroute, Network Troubleshooting
+
 ## Objective
 
 This project demonstrates the use of Wireshark to capture and analyze network traffic. The objective of this project was to develop a stronger understanding of fundamental networking concepts by observing real network communications and protocols in action.
@@ -72,13 +74,13 @@ While capturing network traffic in Wireshark, I generated ICMP traffic by runnin
 
 The Echo Request packets were sent from the client to verify that the destination host was reachable. The destination host responded with Echo Reply packets, confirming successful network connectivity. 
 
-The ping reults showed that all transmitted packets were successfully received with no packet loss, indicating that communcation between the client and the destination host was functioning correctly.
+The ping results showed that all transmitted packets were successfully received with no packet loss, indicating that communication between the client and the destination host was functioning correctly.
 
 By examining the ICMP packets in Wireshark, I was able to observe how network devices use ICMP messages to test connectivity and report network status. 
 
 ### Key Learning 
 
-This analysis helped me understand that ICMP is a protocol used for netowrk diagnostics and troubleshooting. I learned how the ping command uses ICMP Echo Replies to verify whether a host is reachable and to identify potential connectivity issues.
+This analysis helped me understand that ICMP is a protocol used for network diagnostics and troubleshooting. I learned how the ping command uses ICMP Echo Replies to verify whether a host is reachable and to identify potential connectivity issues.
 
 # TCP Analysis
 
@@ -130,13 +132,13 @@ The Client Hello packet contained an SNI (Server Name Indication) value of githu
 
 Following the successful TCP connection, the client initiated a TLS handshake by sending a Client Hello packet. This packet began the process of negotiating encryption settings and establishing a secure communication channel.
 
-The server responded with a Server Hello packet, confirming the TLS parameters that would be used for the session. Aftr the TLS negotiation was complated, encrypted Application Data packets were exchanged between the client and server. 
+The server responded with a Server Hello packet, confirming the TLS parameters that would be used for the session. After the TLS negotiation was completed, encrypted Application Data packets were exchanged between the client and server. 
 
 The use of TLS 1.3 demonstrated how modern websites protect data in transit by encrypting communication between clients and servers. 
 
 ### Key Learning 
 
-This analysis helped me understand the role of TLS in securing network communications. I learned how TLS builds upon a TCP connection to provide confidentiality, integrity, and authentication for HTTPS traffic. I also learned how SNI allows a client to specify the hostname it is attempting to access when mutliple websites share the same server infrastructure.
+This analysis helped me understand the role of TLS in securing network communications. I learned how TLS builds upon a TCP connection to provide confidentiality, integrity, and authentication for HTTPS traffic. I also learned how SNI allows a client to specify the hostname it is attempting to access when multiple websites share the same server infrastructure.
 
 # Traceroute Analysis
 
@@ -146,7 +148,7 @@ The objective of this analysis was to observe the network path taken by packets 
 
 ### Observation
 
-Using the Windows tracert command, I traced the route to Github and observed multiple network hops between the client and the destination. The results included both private and public IP addresses, representing different network devices and routing infrastructure along the path.
+Using the Windows tracert command, I traced the route to GitHub and observed multiple network hops between the client and the destination. The results included both private and public IP addresses, representing different network devices and routing infrastructure along the path.
 
 Some hops returned response times, while others displayed asterisks (* * *), indicating that a response was not received from that hop.
 
@@ -154,17 +156,17 @@ Some hops returned response times, while others displayed asterisks (* * *), ind
 
 The traceroute results demonstrated that network traffic passes through multiple routers before reaching its destination. The initial hops contained private IP addresses associated with local or provider-managed network infrastructure, while later hops contained public IP addresses used on the internet. 
 
-The presence of asterisks did not necessarily indicate a connectivity problem. Instead, it suggested that certain routers were configued not to respond to traceroute requests or were rate-limiting responses.
+The presence of asterisks did not necessarily indicate a connectivity problem. Instead, it suggested that certain routers were configured not to respond to traceroute requests or were rate-limiting responses.
 
 ### Key Learning 
 
-This analysis helped me understand how packets travel across multiple network divices before reaching a destination. I learned how traceroute can be used as a troubleshooting tool to identify network paths, measure latency between hops, and help locate potential connectivity issues.
+This analysis helped me understand how packets travel across multiple network devices before reaching a destination. I learned how traceroute can be used as a troubleshooting tool to identify network paths, measure latency between hops, and help locate potential connectivity issues.
 
 # Lessons Learned
 
 Through this project, I developed a stronger understanding of fundamental networking concepts by capturing and analyzing real network traffic. 
 
-Key concpets learned include:
+Key concepts learned include:
 - How DNS translates domain names into IP addresses before a connection can be established.
 - How ICMP is used for network diagnostics through tools such as ping.
 - How TCP establishes reliable communication using the three-way handshake (SYN, SYN-ACK, ACK).
