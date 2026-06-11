@@ -15,6 +15,10 @@ wireshark-network-analysis/
 │
 ├── README.md
 ├── screenshots/
+│   ├── dns-query-response.png
+│   ├── icmp-echo-request-reply.png
+│   ├── tcp-three-way-handshake.png
+│   └── tls-client-hello.png
 └── captures/
 ```
 
