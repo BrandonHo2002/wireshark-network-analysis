@@ -25,8 +25,8 @@ wireshark-network-analysis/
 # Tools used
 
 - Wireshark - Captured and analyzed network traffic, including DNS, ICMP, TCP, and TLS packets.
-- command Prompt - generated network traffic using commands such as ping, tracert, and ipconfig /flushdns.
-- web browser - generate real-world web traffic by accessing websites and observing DNS resolution, TCP connections, and TLS handshakes.
+- Command Prompt - generated network traffic using commands such as ping, tracert, and ipconfig /flushdns.
+- Web Browser - generate real-world web traffic by accessing websites and observing DNS resolution, TCP connections, and TLS handshakes.
 
 # DNS analysis
 
