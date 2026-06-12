@@ -16,7 +16,7 @@ This project was completed as part of my preparation for entry-level IT Support 
 wireshark-network-analysis/
 │
 ├── README.md
-├── screenshots/
+├── images/
 │   ├── dns-query-response.png
 │   ├── icmp-echo-request-reply.png
 │   ├── tcp-three-way-handshake.png
@@ -186,7 +186,7 @@ While completing this project, I encountered several challenges that required ad
 
 Some of the main challenges included:
 - Identifying relevant packets within large amounts of captured network traffic.
-- Distinguished between source and destination IP addresses during packet analysis.
+- - Distinguishing between source and destination IP addresses during packet analysis.
 - Understanding the purpose of ephemeral source ports used by client devices.
 - Following the sequence of packets involved in the TCP three-way handshake.
 - Interpreting TLS handshake packets and understanding the role of Client Hello, Server Hello, and encrypted Application Data.
