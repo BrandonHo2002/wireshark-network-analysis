@@ -90,11 +90,9 @@ The objective of this analysis was to observe how a TCP connection is establishe
 
 ### Observation 
 
-While capturing traffic in Wireshark, I visited Github using a web browser and filtered for TCP traffic. I observed the TCP three-way handshake consisting of SYN, SYN-ACK, and ACK packets between the client and the destination server.
+While capturing traffic in Wireshark, I visited GitHub using a web browser and filtered for TCP traffic. I observed a TCP three-way handshake consisting of SYN, SYN-ACK, and ACK packets between my computer and a GitHub server.
 
-One observed connection used the following values:
-- Source IP: 192.168.x.x
-- Destination IP: 140.82.x.x
+The connection used destination port 443 (HTTPS), indicating that the browser was preparing to establish a secure web connection. After the handshake completed, TLS handshake packets were observed on the same connection.
 
 ### Screenshot
 
