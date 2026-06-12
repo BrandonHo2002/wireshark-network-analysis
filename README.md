@@ -69,7 +69,7 @@ While capturing network traffic in Wireshark, I generated ICMP traffic by runnin
 
 ![ICMP Echo Request and Reply](images/icmp-echo-request-reply.png)
 
-### findings 
+### Findings 
 
 The Echo Request packets were sent from the client to verify that the destination host was reachable. The destination host responded with Echo Reply packets, confirming successful network connectivity. 
 
@@ -104,7 +104,7 @@ The connection used destination port 443 (HTTPS) and an ephemeral source port as
 
 ### Findings
 
-The TCP handshake began when the client sent a SYN packet to initiate a connection with the server. The server responded with a SYN-ACK packet, indicating that it received the request and was willing to establish a connection. the Client then sent an ACK packet, completing the three-way handshake.
+The TCP handshake began when the client sent a SYN packet to initiate a connection with the server. The server responded with a SYN-ACK packet, indicating that it received the request and was willing to establish a connection. The client then sent an ACK packet, completing the three-way handshake.
 
 The destination port was 443, indicating that the connection was being established for HTTPS traffic. The source port was an ephemeral port automatically assigned by the operating system to uniquely identify the connection.
 
@@ -186,7 +186,7 @@ While completing this project, I encountered several challenges that required ad
 
 Some of the main challenges included:
 - Identifying relevant packets within large amounts of captured network traffic.
-- - Distinguishing between source and destination IP addresses during packet analysis.
+- Distinguishing between source and destination IP addresses during packet analysis.
 - Understanding the purpose of ephemeral source ports used by client devices.
 - Following the sequence of packets involved in the TCP three-way handshake.
 - Interpreting TLS handshake packets and understanding the role of Client Hello, Server Hello, and encrypted Application Data.
