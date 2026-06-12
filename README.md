@@ -2,7 +2,7 @@
 
 **Skills Demonstrated:** Wireshark, DNS, ICMP, TCP/IP, TLS, Traceroute, Network Troubleshooting
 
-## Objective
+# Objective
 
 This project demonstrates the use of Wireshark to capture and analyze network traffic. The objective of this project was to develop a stronger understanding of fundamental networking concepts by observing real network communications and protocols in action.
 
@@ -38,7 +38,7 @@ The objective of this analysis was to observe how domain names are resolved into
 
 ### Observation
 
-To generate DNS traffic, I first cleared the local DNS cache using ipconfig /flushdns and then visited websites using a web browser while capturing packets in Wireshark. After applying a DNS filter, I observed both DNS query and DNS response packets. One of the captured queries showed a request for www.google.com.
+To generate DNS traffic, I first cleared the local DNS cache using ipconfig /flushdns and then visited websites using a web browser while capturing packets in Wireshark. After applying a DNS filter, I observed both DNS query and DNS response packets. One of the captured queries showed a request for github.com.
 
 ### Screenshot
 
