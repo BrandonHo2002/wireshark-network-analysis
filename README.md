@@ -21,7 +21,6 @@ wireshark-network-analysis/
 │   ├── icmp-echo-request-reply.png
 │   ├── tcp-three-way-handshake.png
 │   └── tls-client-hello.png
-└── captures/
 ```
 
 # Tools used
