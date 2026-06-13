@@ -20,7 +20,8 @@ wireshark-network-analysis/
 │   ├── dns-query-response.png
 │   ├── icmp-echo-request-reply.png
 │   ├── tcp-three-way-handshake.png
-│   └── tls-client-hello.png
+│   ├── tls-client-hello.png
+│   └── traceroute-github.png
 ```
 
 # Tools used
@@ -153,6 +154,10 @@ The objective of this analysis was to observe the network path taken by packets 
 Using the Windows tracert command, I traced the route to GitHub and observed multiple network hops between the client and the destination. The results included both private and public IP addresses, representing different network devices and routing infrastructure along the path.
 
 Some hops returned response times, while others displayed asterisks (* * *), indicating that a response was not received from that hop.
+
+### Screenshot
+
+![Traceroute to GitHub](images/traceroute-github.png)
 
 ### Findings
 
